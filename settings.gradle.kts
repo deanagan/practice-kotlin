@@ -7,5 +7,5 @@
  * in the user manual at https://docs.gradle.org/6.7/userguide/multi_project_builds.html
  */
 
-rootProject.name = "practice-kotlin"
-include("app")
+rootProject.name = "practicekotlin"
+include("lib")
