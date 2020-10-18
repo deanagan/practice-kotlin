@@ -16,7 +16,7 @@ object CalculatorTest: Spek({
     val testCases = mapOf(
         Pair(1,2) to 3,
         Pair(2,3) to 5,
-        Pair(1,1) to 20, // failing intentionally
+        Pair(1,1) to 20// failing intentionally
     )
     testCases.forEach { value, expectedValue ->
         describe("$value"){
