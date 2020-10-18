@@ -53,3 +53,7 @@ tasks.register("practicekotlin") {
     group = "practicekotlin"
     description = "$ ./gradlew practicekotlin"
 }
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '6.7'
+}
