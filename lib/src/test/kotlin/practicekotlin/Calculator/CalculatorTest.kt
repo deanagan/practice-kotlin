@@ -29,11 +29,4 @@ object CalculatorTest: Spek({
     }
 
 
-    describe("Calculator") {
-        val calculator by memoized { Calculator() }
-
-        it("1 + 2 = 3") {
-            assertEquals(3, calculator.Sum2Numbers(1, 2))
-        }
-    }
 })
