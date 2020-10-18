@@ -49,7 +49,7 @@ dependencies {
 // This is for our github actions CI. See kotlin.yml
 tasks.register("practicekotlin") {
 
-    dependsOn(":app:test")
+    //dependsOn(":app:test")
     group = "practicekotlin"
-    description = "$ ./gradlew practicekotlin"
+    description = "$ ../gradlew practicekotlin"
 }
