@@ -46,14 +46,14 @@ dependencies {
     // testImplementation("io.kotest:kotest-property") // for kotest property test
 }
 
+task wrapper(type: Wrapper) {
+    gradleVersion = '6.7'
+}
+
 // This is for our github actions CI. See kotlin.yml
 tasks.register("practicekotlin") {
 
-    //dependsOn(":app:test")
+    dependsOn(":app:wrapper")
     group = "practicekotlin"
     description = "$ ./gradlew practicekotlin"
-}
-
-task wrapper(type: Wrapper) {
-    gradleVersion = '6.7'
 }
