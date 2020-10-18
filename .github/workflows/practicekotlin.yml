@@ -32,5 +32,3 @@ jobs:
           wrapper-cache-enabled: true
           dependencies-cache-enabled: true
           configuration-cache-enabled: true
-      - name: Run Tests
-        run: ./gradlew clean build test
