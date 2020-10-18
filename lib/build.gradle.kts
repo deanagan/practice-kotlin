@@ -40,6 +40,17 @@ dependencies {
 
     // This dependency is exported to consumers, that is to say found on their compile classpath.
     api("org.apache.commons:commons-math3:3.6.1")
+
+    // Spek
+    testImplementation("org.spekframework.spek2:spek-dsl-jvm:2.0.13")
+    testImplementation(platform("org.spekframework.spek2:spek-runner-junit5:2.0.13"))
+}
+
+tasks.test {
+	//useJUnitPlatform()
+	testLogging {
+		events("passed", "skipped", "failed")
+	}
 }
 
 // This is for our github actions CI. See kotlin.yml
