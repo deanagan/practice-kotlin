@@ -40,20 +40,10 @@ dependencies {
 
     // This dependency is exported to consumers, that is to say found on their compile classpath.
     api("org.apache.commons:commons-math3:3.6.1")
-
-    // testImplementation("io.kotest:kotest-runner-junit5") // for kotest framework
-    // testImplementation("io.kotest:kotest-assertions-core") // for kotest core jvm assertions
-    // testImplementation("io.kotest:kotest-property") // for kotest property test
-}
-
-task wrapper(type: Wrapper) {
-    gradleVersion = '6.7'
 }
 
 // This is for our github actions CI. See kotlin.yml
 tasks.register("practicekotlin") {
-
-    dependsOn(":app:wrapper")
     group = "practicekotlin"
     description = "$ ./gradlew practicekotlin"
 }
