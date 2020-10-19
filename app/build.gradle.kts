@@ -29,3 +29,10 @@ tasks.test {
 tasks.withType<KotlinCompile>().configureEach {
 	kotlinOptions.jvmTarget = "1.8"
 }
+
+// This is for our github actions CI. See kotlin.yml
+tasks.register("practicekotlin") {
+	dependsOn(":app:test")
+    group = "practicekotlin"
+    description = "$ ./gradlew practicekotlin"
+}
