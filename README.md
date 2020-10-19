@@ -8,4 +8,3 @@ To run test:
 
 These codes are tested in a vscode environment.
 
-Note: The codes in here are dummy for now.
