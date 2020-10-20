@@ -22,6 +22,7 @@ tasks.test {
 	useJUnitPlatform()
 	testLogging {
 		events("passed", "skipped", "failed")
+		showStandardStreams = true // This has to come after events to work
 	}
 }
 
