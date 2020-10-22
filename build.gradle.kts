@@ -5,7 +5,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-	kotlin("jvm") //version "1.3.31"
+	kotlin("jvm") version "1.3.31"
 }
 
 repositories {
@@ -33,7 +33,7 @@ tasks.withType<KotlinCompile>().configureEach {
 
 // This is for our github actions CI. See kotlin.yml
 tasks.register("practicekotlin") {
-	dependsOn(":app:clean", ":app:build")
+	dependsOn("clean", "test")
     group = "practicekotlin"
     description = "$ ./gradlew practicekotlin"
 }
